@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <script>
+        function main()
+        {
+            console.log('main-starts')
+            p1();
+            console.log('miain-ends')
+        }
+        main();
+        function p1()
+        {
+            console.log('p1-strats')
+            console.log('p1-ends')
+        }
+        p1()
+        function p2()
+        {
+            console.log('p2-starts')
+            p1();
+            return
+            console.log('p2-ends')
+            
+        }
+        p2();
+        p3();
+        function p3()
+        {
+            let i=m1();
+            console.log(i)
+        }
+        function m1()
+        {
+            console.log('m1 is executing !!')
+            // return 10; 
+            // return 'hello' 
+            return true 
+            // return undefined
+            // return null
+            // return BigInt
+            // return Symbol
+            // return 19
+        }
+        m1()
+        function sanny()
+        {
+            let i=gupta()
+            console.log(i)
+            let j=gupta()*20
+            console.log(j)
+            console.log(gupta())
+            gupta()
+        }
+        sanny()
+        function gupta()
+        {
+            console.log('gupta-1 is executing')
+            return 10
+        }
+        gupta()
+    </script>
+</head>
+<body>
+    <h1> this is function</h1>
+</body>
+</html>

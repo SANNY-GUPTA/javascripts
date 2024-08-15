@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = [1, 2, 11, 21, 3, 5, 121]
+        a.push(45)
+        console.log(a)
+        a.unshift(23)
+        console.log(a)
+        a.pop()
+        console.log(a)
+        a.shift()
+        console.log(a)
+        a.shift()
+        console.log(a)
+        console.log(a)
+
+
+        let mapp = a.map(function (year) {
+            let v = 50 - year
+            return v
+        })
+
+
+        console.log(mapp)  // in the same array it return the output
+        let eachoffor = a.forEach(function (ele) {
+            console.log(ele)
+        })
+        console.log(eachoffor)
+        console.log(a) // individual extraction and print indivudial also  where u store all element ,at last time 
+        //  call then give undefined because of at last all value are extract so it give undifined
+
+
+        let even = a.filter(function (ele) {
+            if (ele % 2 === 0) {
+                return true
+            }
+        });
+        console.log(even) // apply filter checking the condition are store in different array and Print 
+        console.log(a)
+
+
+        let findd = a.find(function (ele) {
+            return ele > 10;
+        });
+        console.log(findd)
+        console.log(a) // it's return in new array  after conditon are satisfied not iterate for next element
+
+        a.sort()
+        console.log(a) // sorting in ascending order 
+
+
+        let a2 = [1, 2, 11, 22, 5, 4, 126, 45, 5, 21]
+        a2.sort((a, b) => {
+            // return a-b
+            return b - a
+        })
+        console.log(a2)
+        let b = a2.slice(2)
+        console.log(b)
+
+
+        let chckinclude = a2.includes(4)
+        console.log(chckinclude) // here check this value are present in or not
+
+        let result = a2.slice(1, 4)
+        console.log(result) // its return output in new array 
+        console.log(a2)
+
+        let result_1 = a2.splice(2, 2, 'sanny', 'gupta')
+        console.log(a2)
+        console.log(result_1) // Modify in actual array  and return deleted data/element in Array
+
+        let join = a2.join('@')
+        console.log(join)  // it's add within the all individual element but in neew array
+        console.log(a2)
+
+        let excat = a2.some(function (ele)
+        {
+            return ele > 20;
+        })
+        console.log(excat)  // if any condition are true then its true in Boolean data type
+
+        let excat_1=a2.every(function(ele)
+    {
+        return ele>50;
+    })
+    console.log(excat_1) // when using evey then all condition are true and its
+    //  return true in Booolean data type
+    
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        
+
+        // here using .call() Method
+        let name={
+            first:'sanny',
+            last:'Gupta',
+            printfullName:function(hometown){
+                console.log(this.first + " "+ this.last + " "+ hometown)
+            }
+        }
+        name.printfullName('kudra')
+        let name2={
+            first:'ravi',
+            last:'gupta',
+        }
+        name.printfullName.call(name2,'japen')
+
+
+
+        // Here using .apply() Method
+        let game={ 
+            game1:'pubg',
+            game2:'cricket',
+        }
+        let=allgame=function(name,name1){
+            console.log(this.game1 + " " + this.game2+ " "+ name + " "+ name1);
+        }
+        allgame.apply(game,['sanny','sachin'])
+        let game11={
+            game1:'football',
+            game2:'chess',
+        }
+        allgame.apply(game11,["aman","ravi"]);
+
+
+
+
+        // Here using .bind() Method
+        let gana={ 
+            gana1:'sa re ga ma ',
+            gana2:'sare jaha se aacha ',
+        }
+        let=allgana=function(name,name1){
+            console.log(this.gana1 + " " + this.gana2 + " "+ name + " "+ name1);
+        }
+        let delay1=allgana.bind(gana,'sanny','sachin')
+        // console.log(delay1)
+        delay1()
+        let gana11={
+            gana1:'hindustan hamara',
+            gana2:'ham bulbule hai tumhare',
+        }
+        let dealy=allgana.bind(gana11,'ravi','aman');
+        // console.log(dealy);
+        dealy();
+        
+
+    </script>
+</head>
+<body>
+    <h1>Here show call method and how to use this method</h1>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        "use strict";  // using to "use strict" for Error catching,Improving code quality,Enhancing security,Future compatibility for your code
+        var a=10 // Here we declare a without any keywords so it give ReferenceError: a is not defined
+        console.log(a, typeof a)
+
+        let passtest=false;
+        let getdrivinglic=false
+
+        passtest=true
+        if(passtest)
+        {
+           getdrivinglic=true  // print he hs=true
+           let  getdrivinglc=true // by mistake one character miss then show  Uncaught ReferenceError:variable not defined
+            // but When we not using "use strict" then no error print [he has=false]
+            // when using "use strict" then  show Uncaught ReferenceError:variable not defined
+            // ONLY ONE SOLUTION THEN STORE THAT VARIABLE USING [LET || CONST || VAR] then no error show
+        }
+        console.log('he has='+getdrivinglic)
+        
+       /* function main(a,b,c) // SyntaxError
+        {
+            console.log(a,b)
+            // when not "use strict" then it give a=3,b=2
+            // when "use strict" then  it give syntaxError:Duplicate parameter name not allowed in this context
+        }
+        main(1,2,3)*/
+
+        /*
+        function main(a,b,a) not use 'use strict' run and Show 
+        {
+            console.log(a,b) // 3,2
+        }
+        main(1,2,3)
+        */
+    </script>
+</head>
+<body>
+    <h1> Here we using "use strict" function </h1>
+</body>
+</html>

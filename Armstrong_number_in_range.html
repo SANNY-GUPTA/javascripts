@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        ll=Number(prompt('enter the lower value Range'))
+        ul=Number(prompt('enter the upper value range'))
+        for(let num=ll;num<ul+1;num++)
+        {
+            if (num>1)
+            {
+                let dummy=num
+                sum=0
+                while(dummy>0)
+                {
+                    for(let i=1;i<num+1;i++)
+                    {
+                    let rem=dummy%10
+                    dummy=Math.trunc(dummy/10)
+                    sum+=rem*rem*rem
+                    }
+                    if(sum==num)
+                    {
+                    console.log(num)
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Here we print All Armstrong Number in Given Range Whose are Taken By user both upper and lower Range</h1>
+</body>
+</html>

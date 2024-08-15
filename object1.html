@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        let student=
+        {
+            stuid:'sa01',
+            stuname:'sanny',
+            stulast:'gupta',
+            age:21,
+            year:2001,
+            gender:'male'
+        };  
+        console.log(student)
+        console.log(this)
+        console.log(student,typeof student)
+        let name=student.stuname;
+        console.log(`student first name is =${name}`);
+        let stuage=student.age
+        console.log(stuage)
+        console.log(student.year)
+        console.log(student['gender'])
+        console.log(student['age'])
+
+        let agee=student.agdsfhui
+        console.log(student[agee])
+        console.log(student.genderr)
+
+        // Here using trying to access unable data so, its gaves Undefined
+        let info=prompt('search value!!')
+        console.log(info, typeof info) 
+        let seachdata=student.info
+        console.log('seachData='+seachdata) // seachData=undefined
+
+        seachdata=student[info]  // here in []bracket pass only normal form not String of variable like: -"age","gender" when we pass so error
+        console.log('seaceh data ='+ seachdata)
+    </script>
+</head>
+<body>
+    <h1> HEre we study about Object and how to call object by using of objReference</h1>
+</body>
+</html>

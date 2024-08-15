@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        ll=Number(prompt('enter the lower value'))
+        ul=Number(prompt('enter the upper value'))
+        for(var num =ll;num<=ul;num++)
+        {   
+            let sum=0
+            for(let i=1;i<=num/2;++i)
+            {
+                if(num%i==0)
+                {
+                    sum+=i
+                }
+            }
+            if(sum==num)
+            {
+                console.log(num)
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1> there we find all perfect number in given range</h1>
+</body>
+</html>

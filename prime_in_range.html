@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>prime in range</title>
+    <script>
+        ll=Number(prompt('enter the lower value'))
+        ul=Number(prompt('enter thr upper value'))
+        // var flag;
+        for(let num=ll;num<=ul;num++)
+        {
+            if (num>1)
+            {
+                var flag=1;
+                for(let i=2;i<Math.trunc(num/2)+1;++i)
+                {
+                    if(num%i==0)
+                    {
+                        flag=0
+                        break;
+                    }
+                    
+                }
+                if(flag==1)
+                {
+                    console.log(num)
+                } 
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>there we print all prime number in given range</h1>
+</body>
+</html>

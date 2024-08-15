@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let b=10
+        // console.log(a)
+        // var a=10;
+        // console.log(a)
+        // Scope
+        
+        let firstname='sanny'
+        let lastname='Gupta'
+        function main(id)
+        {
+            let course='python'
+            let birthyear=2001
+            if(birthyear<=2002)
+            {
+                let ms1='hello'
+                var ms2='Hi'
+                const ms3='welcome'
+                console.log(ms1) //hell0
+                console.log(ms2)  // hi
+                console.log(ms3)   // welcome
+            }
+            console.log(ms2)   // hi
+            console.log(firstname)   // sanny
+            console.log(course)   // python
+            // console.log(ms1)   // refferenceError:ms1 declare in Block Scope ,So only accessable within block 
+            // console.log(ms3)   // refferenceError:ms1 declare in Block Scope ,So only accessable within block 
+        }
+        console.log(firstname)
+        // console.log(course)
+        main();
+
+
+
+        
+
+// Rest Parameter or Rest Operators
+        function a()
+        {
+            add(3,4,5)
+            add(1,2,4,5,1)
+            add(-1,-7,8,25)
+        } 
+        function add(...n1)
+        {
+            let size=n1.length
+            let sum=0
+            for(let i=0;i<size;i++)
+            {
+                sum+=n1[i]
+                // console.log(sum[i])
+            }
+            console.log(sum)
+            // return n1.reduce((a,b)=>a+b)
+        }
+        a();
+        
+    </script>
+</head>
+<body>
+    <h1>Here we checking Scopes variable and Rest parameters/operators </h1>
+</body>
+</html>

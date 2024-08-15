@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Armstrong_Number</title>
+    <script>
+        let n=Number(prompt('enter the number'))   //153
+        let sum=0; 
+        let assume=n;
+        while (assume>0)
+        {
+            let rem=assume%10
+            sum+=rem*rem*rem
+            assume=Math.trunc(assume/10)
+        }
+        if(sum==n)
+        {
+            console.log('its armstrong Number');
+        }
+        else
+        {
+            console.log('its not armstring Number');
+        }
+    </script>
+</head>
+<body>
+    <h1>this is Armstrong Number </h1>
+</body>
+</html>

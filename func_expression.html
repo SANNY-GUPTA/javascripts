@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        let s=function()
+        {
+            console.log('this is 1') 
+            s1()  //its function expression so not call berfore function declaration
+            return 
+            console.log('this is 2')
+        }
+        s();
+        var s1=function()
+        {
+            console.log('this is 3')
+            // s()
+            return
+            console.log('this is 4')
+        }
+        s1();
+    </script>
+</head>
+<body>
+    <h1> Here we learn Function Expression</h1>
+</body>
+</html>
